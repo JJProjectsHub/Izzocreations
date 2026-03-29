@@ -1,0 +1,481 @@
+/* ===================================
+   IZZO — Handmade for you
+   Main Stylesheet
+=================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garant:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+/* --- Variables --- */
+:root {
+  --pink-light:  #FDE8F0;
+  --pink-mid:    #F4B8D0;
+  --pink-dark:   #D96B94;
+  --white:       #FFFFFF;
+  --off-white:   #FDFAFB;
+  --dark:        #1A1A1A;
+  --gray:        #7A7A7A;
+  --border:      #F0D0DC;
+}
+
+/* --- Reset --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: var(--dark);
+  background-color: var(--white);
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* --- Header --- */
+header {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.logo {
+  font-family: 'Cormorant Garant', serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: var(--dark);
+  text-transform: uppercase;
+}
+
+.tagline {
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--pink-dark);
+}
+
+/* --- Navigation --- */
+nav {
+  background-color: var(--pink-light);
+  border-bottom: 1px solid var(--border);
+  padding: 0 40px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+nav ul li a {
+  display: block;
+  padding: 14px 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--dark);
+  transition: color 0.2s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: var(--pink-dark);
+}
+
+/* --- Hero --- */
+.hero {
+  background-color: var(--pink-light);
+  text-align: center;
+  padding: 70px 40px;
+}
+
+.hero h1 {
+  font-family: 'Cormorant Garant', serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--dark);
+}
+
+.hero p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--gray);
+  max-width: 480px;
+  margin: 0 auto 28px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--pink-dark);
+  color: var(--white);
+  padding: 12px 32px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #c45a82;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--pink-dark);
+  border: 1.5px solid var(--pink-dark);
+}
+
+.btn-outline:hover {
+  background-color: var(--pink-dark);
+  color: var(--white);
+}
+
+/* --- Sections --- */
+section {
+  padding: 60px 40px;
+}
+
+section.alt {
+  background-color: var(--off-white);
+}
+
+.section-title {
+  font-family: 'Cormorant Garant', serif;
+  font-size: 1.9rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.section-sub {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--gray);
+  letter-spacing: 0.1em;
+  margin-bottom: 40px;
+}
+
+.divider {
+  width: 50px;
+  height: 2px;
+  background-color: var(--pink-mid);
+  margin: 12px auto 40px;
+}
+
+/* --- Product Grid --- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 28px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  text-align: center;
+  padding-bottom: 20px;
+  transition: box-shadow 0.2s;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 20px rgba(217, 107, 148, 0.15);
+}
+
+.product-placeholder {
+  width: 100%;
+  height: 200px;
+  background-color: var(--pink-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--pink-dark);
+  margin-bottom: 16px;
+}
+
+.product-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.product-card h3 {
+  font-family: 'Cormorant Garant', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.product-card p {
+  font-size: 0.78rem;
+  color: var(--gray);
+  margin-bottom: 14px;
+  padding: 0 12px;
+}
+
+.product-card .price {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--pink-dark);
+  margin-bottom: 14px;
+}
+
+/* --- Categories --- */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.category-card {
+  text-align: center;
+  padding: 30px 20px;
+  border: 1px solid var(--border);
+  background-color: var(--white);
+  transition: background-color 0.2s;
+}
+
+.category-card:hover {
+  background-color: var(--pink-light);
+}
+
+.category-card .icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.category-card h3 {
+  font-family: 'Cormorant Garant', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* --- Reviews --- */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+.review-card {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  padding: 24px;
+}
+
+.review-card .stars {
+  color: var(--pink-dark);
+  font-size: 1rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.review-card p {
+  font-size: 0.85rem;
+  color: var(--gray);
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.review-card .reviewer {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* --- Steps --- */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.step {
+  text-align: center;
+  padding: 20px;
+}
+
+.step-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--pink-mid);
+  color: var(--white);
+  font-family: 'Cormorant Garant', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+}
+
+.step h3 {
+  font-family: 'Cormorant Garant', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.step p {
+  font-size: 0.82rem;
+  color: var(--gray);
+}
+
+/* --- About --- */
+.about-content {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin-bottom: 16px;
+}
+
+.about-placeholder {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-color: var(--pink-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--pink-dark);
+  margin: 0 auto 30px;
+}
+
+/* --- Contact --- */
+.contact-content {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-content p {
+  font-size: 0.88rem;
+  color: var(--gray);
+  margin-bottom: 24px;
+}
+
+.contact-email {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--pink-dark);
+  border-bottom: 1px solid var(--pink-mid);
+  padding-bottom: 2px;
+}
+
+/* --- Customise page --- */
+.customise-content {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.customise-content p {
+  font-size: 0.88rem;
+  color: var(--gray);
+  margin-bottom: 20px;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  margin: 32px 0;
+  text-align: left;
+}
+
+.option-item {
+  background-color: var(--pink-light);
+  padding: 18px;
+  border: 1px solid var(--border);
+  font-size: 0.82rem;
+}
+
+.option-item strong {
+  display: block;
+  font-family: 'Cormorant Garant', serif;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+/* --- Footer --- */
+footer {
+  background-color: var(--dark);
+  color: #aaa;
+  text-align: center;
+  padding: 36px 40px;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+}
+
+footer .footer-logo {
+  font-family: 'Cormorant Garant', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+footer p {
+  margin-bottom: 6px;
+}
+
+footer a {
+  color: var(--pink-mid);
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  header { padding: 20px; }
+  .logo { font-size: 2.4rem; }
+  nav { padding: 0 10px; }
+  nav ul li a { padding: 12px 12px; font-size: 0.65rem; }
+  section { padding: 44px 20px; }
+  .hero { padding: 50px 20px; }
+  .hero h1 { font-size: 1.8rem; }
+}
