@@ -34,95 +34,28 @@
   <section>
     <h2 class="section-title">Jewellery</h2>
     <div class="divider"></div>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="images/IMG_2521.jpg" alt="Handmade Choker" class="product-img" />
-        <h3>Chokers</h3>
-        <p>Handmade with care, available in a range of colours.</p>
-        <div class="price">£TBC</div>
-        <a href="how-to-order.html" class="btn" style="font-size:0.65rem; padding:10px 22px;">Order by Email</a>
-      </div>
-      <div class="product-card">
-        <div class="product-placeholder">Photo Coming Soon</div>
-        <h3>Stud Earrings</h3>
-        <p>Dainty and cute, perfect for everyday wear.</p>
-        <div class="price">£TBC</div>
-        <a href="how-to-order.html" class="btn" style="font-size:0.65rem; padding:10px 22px;">Order by Email</a>
-      </div>
-      <div class="product-card">
-        <div class="product-placeholder">Photo Coming Soon</div>
-        <h3>Charm Bracelet</h3>
-        <p>A beautiful bracelet with hand-chosen charms.</p>
-        <div class="price">£TBC</div>
-        <a href="how-to-order.html" class="btn" style="font-size:0.65rem; padding:10px 22px;">Order by Email</a>
-      </div>
-    </div>
+    <div class="product-grid" id="grid-jewellery"></div>
   </section>
 
   <!-- Friendship Bracelets -->
   <section class="alt">
     <h2 class="section-title">Friendship Bracelets</h2>
     <div class="divider"></div>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="images/IMG_2527.jpg" alt="Personalised Friendship Bracelet" class="product-img" />
-        <h3>Classic Friendship Bracelet</h3>
-        <p>Choose your colours and we'll weave it just for you.</p>
-        <div class="price">£TBC</div>
-        <a href="how-to-order.html" class="btn" style="font-size:0.65rem; padding:10px 22px;">Order by Email</a>
-      </div>
-      <div class="product-card">
-        <div class="product-placeholder">Photo Coming Soon</div>
-        <h3>Matching Best Friend Set</h3>
-        <p>Two matching bracelets — one for you, one for your bestie!</p>
-        <div class="price">£TBC</div>
-        <a href="how-to-order.html" class="btn" style="font-size:0.65rem; padding:10px 22px;">Order by Email</a>
-      </div>
-    </div>
+    <div class="product-grid" id="grid-bracelets"></div>
   </section>
 
   <!-- Keyrings -->
   <section>
     <h2 class="section-title">Keyrings</h2>
     <div class="divider"></div>
-    <div class="product-grid">
-      <div class="product-card">
-        <div class="product-placeholder">Photo Coming Soon</div>
-        <h3>Beaded Keyring</h3>
-        <p>A lovely handmade keyring to brighten up your keys or bag.</p>
-        <div class="price">£TBC</div>
-        <a href="how-to-order.html" class="btn" style="font-size:0.65rem; padding:10px 22px;">Order by Email</a>
-      </div>
-      <div class="product-card">
-        <div class="product-placeholder">Photo Coming Soon</div>
-        <h3>Charm Keyring</h3>
-        <p>With cute little charms — a great gift idea too!</p>
-        <div class="price">£TBC</div>
-        <a href="how-to-order.html" class="btn" style="font-size:0.65rem; padding:10px 22px;">Order by Email</a>
-      </div>
-    </div>
+    <div class="product-grid" id="grid-keyrings"></div>
   </section>
 
   <!-- Bookmarks -->
   <section class="alt">
     <h2 class="section-title">Bookmarks</h2>
     <div class="divider"></div>
-    <div class="product-grid">
-      <div class="product-card">
-        <div class="product-placeholder">Photo Coming Soon</div>
-        <h3>Tassel Bookmark</h3>
-        <p>A pretty handmade bookmark for every bookworm!</p>
-        <div class="price">£TBC</div>
-        <a href="how-to-order.html" class="btn" style="font-size:0.65rem; padding:10px 22px;">Order by Email</a>
-      </div>
-      <div class="product-card">
-        <div class="product-placeholder">Photo Coming Soon</div>
-        <h3>Beaded Bookmark</h3>
-        <p>Colourful beads on a ribbon — beautiful and unique.</p>
-        <div class="price">£TBC</div>
-        <a href="how-to-order.html" class="btn" style="font-size:0.65rem; padding:10px 22px;">Order by Email</a>
-      </div>
-    </div>
+    <div class="product-grid" id="grid-bookmarks"></div>
   </section>
 
   <!-- Want something custom? -->
@@ -141,6 +74,30 @@
     <p>Get in touch: <a href="mailto:izzohandmade2@gmail.com">izzohandmade2@gmail.com</a></p>
     <p style="margin-top:16px;">&copy; 2025 Izzo. All rights reserved.</p>
   </footer>
+
+  <script src="products.js"></script>
+  <script>
+    function renderGrid(gridId, items) {
+      const grid = document.getElementById(gridId);
+      grid.innerHTML = items.map(function(p) {
+        const photo = p.image
+          ? '<img src="' + p.image + '" alt="' + p.name + '" class="product-img" />'
+          : '<div class="product-placeholder">Photo Coming Soon</div>';
+        return '<div class="product-card">' +
+          photo +
+          '<h3>' + p.name + '</h3>' +
+          '<p>' + p.description + '</p>' +
+          '<div class="price">' + p.price + '</div>' +
+          '<a href="how-to-order.html" class="btn" style="font-size:0.65rem; padding:10px 22px;">Order by Email</a>' +
+          '</div>';
+      }).join('');
+    }
+
+    renderGrid('grid-jewellery', products.jewellery);
+    renderGrid('grid-bracelets', products.bracelets);
+    renderGrid('grid-keyrings', products.keyrings);
+    renderGrid('grid-bookmarks', products.bookmarks);
+  </script>
 
 </body>
 </html>
