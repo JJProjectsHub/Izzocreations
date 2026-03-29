@@ -22,7 +22,7 @@ const products = {
       name: "Chokers",
       description: "Handmade with care, available in a range of colours.",
       price: "£TBC",
-      image: "images/IMG_2521.jpg"
+      image: "images/Choker_blue_heartcharm.png"
     },
     {
       name: "Stud Earrings",
