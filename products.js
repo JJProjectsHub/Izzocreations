@@ -46,6 +46,12 @@ const products = {
       image: "images/Custom_pinkZoeybracelet.jpg"
     },
     {
+      name: "Friendship Bracelet",
+      description: "Handmade and full of colour — the perfect gift for a best friend!",
+      price: "£TBC",
+      image: "images/IMG_2533.jpg"
+    },
+    {
       name: "Matching Best Friend Set",
       description: "Two matching bracelets — one for you, one for your bestie!",
       price: "£TBC",
