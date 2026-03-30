@@ -22,7 +22,7 @@ const products = {
       name: "Chokers",
       description: "Handmade with care, available in a range of colours.",
       price: "£TBC",
-      image: "images/Choker_blue_heartcharm.png"
+      image: "images/IMG_2521.jpg"
     },
     {
       name: "Stud Earrings",
@@ -43,7 +43,7 @@ const products = {
       name: "Classic Friendship Bracelet",
       description: "Choose your colours and we'll weave it just for you.",
       price: "£TBC",
-      image: "images/Custom_pinkZoeybracelet.jpg"
+      image: "images/IMG_2527.jpg"
     },
     {
       name: "Friendship Bracelet",
