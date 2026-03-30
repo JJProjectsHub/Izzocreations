@@ -75,13 +75,18 @@
     <p style="margin-top:16px;">&copy; 2025 Izzo. All rights reserved.</p>
   </footer>
 
+  <!-- Lightbox -->
+  <div id="lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.8); z-index:1000; align-items:center; justify-content:center; cursor:pointer;">
+    <img id="lightbox-img" src="" alt="" style="max-width:90%; max-height:90%; border-radius:12px; box-shadow:0 8px 32px rgba(0,0,0,0.5);" />
+  </div>
+
   <script src="products.js"></script>
   <script>
     function renderGrid(gridId, items) {
       const grid = document.getElementById(gridId);
       grid.innerHTML = items.map(function(p) {
         const photo = p.image
-          ? '<img src="' + p.image + '" alt="' + p.name + '" class="product-img" />'
+          ? '<img src="' + p.image + '" alt="' + p.name + '" class="product-img" style="cursor:zoom-in;" onclick="openLightbox(\'' + p.image + '\', \'' + p.name + '\')" />'
           : '<div class="product-placeholder">Photo Coming Soon</div>';
         return '<div class="product-card">' +
           photo +
@@ -92,6 +97,17 @@
           '</div>';
       }).join('');
     }
+
+    function openLightbox(src, alt) {
+      const lb = document.getElementById('lightbox');
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-img').alt = alt;
+      lb.style.display = 'flex';
+    }
+
+    document.getElementById('lightbox').addEventListener('click', function() {
+      this.style.display = 'none';
+    });
 
     renderGrid('grid-jewellery', products.jewellery);
     renderGrid('grid-bracelets', products.bracelets);
