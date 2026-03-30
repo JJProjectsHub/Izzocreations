@@ -43,7 +43,8 @@ const products = {
       name: "Classic Friendship Bracelet",
       description: "Choose your colours and we'll weave it just for you.",
       price: "£TBC",
-      image: "images/IMG_2527.jpg"
+      image: "images/IMG_2527.jpg",
+      custom: true
     },
     {
       name: "Friendship Bracelet",

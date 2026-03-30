@@ -73,6 +73,15 @@
     </div>
   </section>
 
+  <section>
+    <h2 class="section-title">Custom Examples</h2>
+    <div class="divider"></div>
+    <p style="text-align:center; font-size:0.88rem; color:var(--gray); max-width:480px; margin:0 auto 28px;">
+      Here are some of the custom pieces we've made — get in touch if you'd like something similar!
+    </p>
+    <div class="product-grid" id="custom-gallery"></div>
+  </section>
+
   <section style="text-align:center;">
     <h2 class="section-title">Ready to get started?</h2>
     <div class="divider"></div>
@@ -81,6 +90,47 @@
     </p>
     <a href="mailto:izzohandmade2@gmail.com" class="btn">Email Us Your Idea</a>
   </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.8); z-index:1000; align-items:center; justify-content:center; cursor:pointer;">
+    <img id="lightbox-img" src="" alt="" style="max-width:90%; max-height:90%; border-radius:12px; box-shadow:0 8px 32px rgba(0,0,0,0.5);" />
+  </div>
+
+  <script src="products.js"></script>
+  <script>
+    const allProducts = [].concat(
+      products.jewellery,
+      products.bracelets,
+      products.keyrings,
+      products.bookmarks
+    );
+
+    const customItems = allProducts.filter(function(p) { return p.custom && p.image; });
+
+    const gallery = document.getElementById('custom-gallery');
+    if (customItems.length === 0) {
+      gallery.innerHTML = '<p style="text-align:center; color:var(--gray); font-size:0.88rem;">Photos coming soon!</p>';
+    } else {
+      gallery.innerHTML = customItems.map(function(p) {
+        return '<div class="product-card">' +
+          '<img src="' + p.image + '" alt="' + p.name + '" class="product-img" style="cursor:zoom-in;" onclick="openLightbox(\'' + p.image + '\', \'' + p.name + '\')" />' +
+          '<h3>' + p.name + '</h3>' +
+          '<p>' + p.description + '</p>' +
+          '</div>';
+      }).join('');
+    }
+
+    function openLightbox(src, alt) {
+      const lb = document.getElementById('lightbox');
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-img').alt = alt;
+      lb.style.display = 'flex';
+    }
+
+    document.getElementById('lightbox').addEventListener('click', function() {
+      this.style.display = 'none';
+    });
+  </script>
 
   <footer>
     <div class="footer-logo">Izzo</div>
