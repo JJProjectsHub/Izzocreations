@@ -318,7 +318,7 @@ section.alt {
 /* --- Steps --- */
 .steps {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 24px;
   max-width: 900px;
   margin: 0 auto;
