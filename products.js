@@ -50,7 +50,8 @@ const products = {
       name: "Friendship Bracelet",
       description: "Handmade and full of colour — the perfect gift for a best friend!",
       price: "£TBC",
-      image: "images/IMG_2533.jpg"
+      image: "images/IMG_2533.jpg",
+      custom: true
     },
     {
       name: "Matching Best Friend Set",
