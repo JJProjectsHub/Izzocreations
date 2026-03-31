@@ -29,6 +29,12 @@ const products = {
       description: "A beautiful bracelet with hand-chosen charms.",
       price: "£TBC",
       image: ""
+    },
+    {
+      name: "Sea Shell Waves Bracelet",
+      description: "Handmade with love — perfect for every day.",
+      price: "£2",
+      image: "images/IMG_2547.jpg"
     }
   ],
 
@@ -70,12 +76,6 @@ const products = {
       description: "Handmade with love — perfect for every day.",
       price: "£2",
       image: "images/IMG_2545.jpg"
-    },
-    {
-      name: "Sea Shell Waves Bracelet",
-      description: "Handmade with love — perfect for every day.",
-      price: "£2",
-      image: "images/IMG_2547.jpg"
     },
     {
       name: "Matching Best Friend Set",
