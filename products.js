@@ -95,8 +95,8 @@ const products = {
     {
       name: "Charm Keyring",
       description: "With cute little charms — a great gift idea too!",
-      price: "£TBC",
-      image: ""
+      price: "£2",
+      image: "images/IMG_2550.jpg"
     }
   ],
 
