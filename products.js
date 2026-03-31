@@ -80,8 +80,8 @@ const products = {
     {
       name: "Matching Best Friend Set",
       description: "Two matching bracelets — one for you, one for your bestie!",
-      price: "£TBC",
-      image: ""
+      price: "£4",
+      image: "images/IMG_2551.jpg"
     }
   ],
 
