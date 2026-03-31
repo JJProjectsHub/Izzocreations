@@ -93,6 +93,12 @@ const products = {
       image: "images/IMG_2538.jpg"
     },
     {
+      name: "Golden Pearl Keyring",
+      description: "A handmade keyring to brighten up your keys or bag.",
+      price: "£1",
+      image: "images/IMG_2557.jpg"
+    },
+    {
       name: "Starship Sunshine Keyring",
       description: "A handmade keyring to brighten up your keys or bag.",
       price: "£1",
