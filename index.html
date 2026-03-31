@@ -71,30 +71,46 @@
   <section>
     <h2 class="section-title">Our Latest Creations</h2>
     <div class="divider"></div>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="images/IMG_2521 2.jpg" alt="Handmade Choker" class="product-img" />
-        <h3>Chokers</h3>
-        <p>Delicate and beautiful, perfect for every day.</p>
-        <div class="price">£3</div>
-        <a href="how-to-order.html" class="btn" style="font-size:0.65rem; padding:10px 22px;">Order by Email</a>
-      </div>
-      <div class="product-card">
-        <div class="product-placeholder">Photo Coming Soon</div>
-        <h3>Friendship Bracelet</h3>
-        <p>Choose your colours — made to match your bestie.</p>
-        <div class="price">£TBC</div>
-        <a href="how-to-order.html" class="btn" style="font-size:0.65rem; padding:10px 22px;">Order by Email</a>
-      </div>
-      <div class="product-card">
-        <div class="product-placeholder">Photo Coming Soon</div>
-        <h3>Handmade Keyring</h3>
-        <p>A little something lovely for your keys or bag.</p>
-        <div class="price">£TBC</div>
-        <a href="how-to-order.html" class="btn" style="font-size:0.65rem; padding:10px 22px;">Order by Email</a>
-      </div>
-    </div>
+    <div class="product-grid" id="featured-grid"></div>
   </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.8); z-index:1000; align-items:center; justify-content:center; cursor:pointer;">
+    <img id="lightbox-img" src="" alt="" style="max-width:90%; max-height:90%; border-radius:12px; box-shadow:0 8px 32px rgba(0,0,0,0.5);" />
+  </div>
+
+  <script src="products.js"></script>
+  <script>
+    const allProducts = [].concat(
+      products.jewellery,
+      products.bracelets,
+      products.keyrings,
+      products.bookmarks
+    ).filter(function(p) { return p.image; });
+
+    const featured = allProducts.slice(-3).reverse();
+
+    document.getElementById('featured-grid').innerHTML = featured.map(function(p) {
+      return '<div class="product-card">' +
+        '<img src="' + p.image + '" alt="' + p.name + '" class="product-img" style="cursor:zoom-in;" onclick="openLightbox(\'' + p.image + '\', \'' + p.name + '\')" />' +
+        '<h3>' + p.name + '</h3>' +
+        '<p>' + p.description + '</p>' +
+        '<div class="price">' + p.price + '</div>' +
+        '<a href="how-to-order.html" class="btn" style="font-size:0.65rem; padding:10px 22px;">Order by Email</a>' +
+        '</div>';
+    }).join('');
+
+    function openLightbox(src, alt) {
+      const lb = document.getElementById('lightbox');
+      document.getElementById('lightbox-img').src = encodeURI(src);
+      document.getElementById('lightbox-img').alt = alt;
+      lb.style.display = 'flex';
+    }
+
+    document.getElementById('lightbox').addEventListener('click', function() {
+      this.style.display = 'none';
+    });
+  </script>
 
   <!-- Footer -->
   <footer>
