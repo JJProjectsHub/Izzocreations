@@ -113,7 +113,7 @@ const products = {
     {
       name: "Peace Charm Keyring",
       description: "With cute little charms — a great gift idea too!",
-      price: "£2",
+      price: "£1",
       image: "images/IMG_2550.jpg"
     }
   ],
