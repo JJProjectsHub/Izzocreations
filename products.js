@@ -72,6 +72,12 @@ const products = {
       image: "images/IMG_2545.jpg"
     },
     {
+      name: "Bracelet",
+      description: "Handmade with love — perfect for every day.",
+      price: "£2",
+      image: "images/IMG_2547.jpg"
+    },
+    {
       name: "Matching Best Friend Set",
       description: "Two matching bracelets — one for you, one for your bestie!",
       price: "£TBC",
