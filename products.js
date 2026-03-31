@@ -25,12 +25,6 @@ const products = {
       image: "images/IMG_2521 2.jpg"
     },
     {
-      name: "Stud Earrings",
-      description: "Dainty and cute, perfect for everyday wear.",
-      price: "£TBC",
-      image: ""
-    },
-    {
       name: "Charm Bracelet",
       description: "A beautiful bracelet with hand-chosen charms.",
       price: "£TBC",
