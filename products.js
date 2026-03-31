@@ -34,7 +34,7 @@ const products = {
 
   bracelets: [
     {
-      name: "Bracelet",
+      name: "Mira Bracelet",
       description: "Handmade with love — perfect for every day.",
       price: "£2",
       image: "images/IMG_2553.jpg"
@@ -54,25 +54,25 @@ const products = {
       custom: true
     },
     {
-      name: "Bracelet",
+      name: "Citrus Lemon Bracelet",
       description: "Handmade with love — perfect for every day.",
       price: "£2",
       image: "images/IMG_2540.jpg"
     },
     {
-      name: "Bracelet",
+      name: "Orange Sherbert Bracelet",
       description: "Handmade with love — perfect for every day.",
       price: "£2",
       image: "images/IMG_2541.jpg"
     },
     {
-      name: "Bracelet",
+      name: "Rose Petal Bracelet",
       description: "Handmade with love — perfect for every day.",
       price: "£2",
       image: "images/IMG_2545.jpg"
     },
     {
-      name: "Bracelet",
+      name: "Sea Shell Waves Bracelet",
       description: "Handmade with love — perfect for every day.",
       price: "£2",
       image: "images/IMG_2547.jpg"
