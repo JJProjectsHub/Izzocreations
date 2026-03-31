@@ -99,7 +99,7 @@
 
     function openLightbox(src, alt) {
       const lb = document.getElementById('lightbox');
-      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-img').src = encodeURI(src);
       document.getElementById('lightbox-img').alt = alt;
       lb.style.display = 'flex';
     }
