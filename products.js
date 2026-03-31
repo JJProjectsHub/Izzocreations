@@ -87,9 +87,9 @@ const products = {
 
   keyrings: [
     {
-      name: "Beaded Keyring",
+      name: "Mykeys Keyring",
       description: "A lovely handmade keyring to brighten up your keys or bag.",
-      price: "£TBC",
+      price: "£1",
       image: "images/IMG_2538.jpg"
     },
     {
