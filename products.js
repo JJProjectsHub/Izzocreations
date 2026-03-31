@@ -40,6 +40,12 @@ const products = {
 
   bracelets: [
     {
+      name: "Bracelet",
+      description: "Handmade with love — perfect for every day.",
+      price: "£2",
+      image: "images/IMG_2553.jpg"
+    },
+    {
       name: "Classic Friendship Bracelet",
       description: "Choose your colours and we'll weave it just for you.",
       price: "£TBC",
