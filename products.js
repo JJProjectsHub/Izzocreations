@@ -125,12 +125,6 @@ const products = {
       price: "50p",
       image: "images/IMG_2571.jpg"
     },
-    {
-      name: "Tassel Bookmark",
-      description: "A pretty handmade bookmark for every bookworm!",
-      price: "£TBC",
-      image: ""
-    },
   ]
 
 };
