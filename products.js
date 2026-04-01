@@ -99,6 +99,12 @@ const products = {
       image: "images/IMG_2538.jpg"
     },
     {
+      name: "Silver Pearl Keyring with Seashell Charm",
+      description: "A handmade keyring to brighten up your keys or bag.",
+      price: "£1",
+      image: "images/IMG_2580.jpg"
+    },
+    {
       name: "Minor Little Thanks Keyring",
       description: "A handmade keyring to brighten up your keys or bag.",
       price: "£1",
