@@ -84,13 +84,16 @@
     function renderGrid(gridId, items) {
       const grid = document.getElementById(gridId);
       grid.innerHTML = items.map(function(p) {
-        const photo = p.image
+        const imgHtml = p.image
           ? '<img src="' + p.image + '" alt="' + p.name + '" class="product-img" style="cursor:zoom-in;" onclick="openLightbox(\'' + p.image + '\', \'' + p.name + '\')" />'
           : '<div class="product-placeholder">Photo Coming Soon</div>';
-        const soldStamp = p.sold ? '<div class="sold-stamp">Sold</div><p style="font-size:0.78rem; color:var(--pink-dark); margin-top:8px;"><a href="contact.html" style="color:var(--pink-dark);">Like this? Ask us to make another!</a></p>' : '';
+        const photo = p.sold
+          ? '<div style="position:relative;">' + imgHtml + '<div class="sold-stamp">Sold</div></div>'
+          : imgHtml;
+        const soldNote = p.sold ? '<p style="font-size:0.78rem; color:var(--pink-dark); margin-top:8px;"><a href="contact.html" style="color:var(--pink-dark);">Like this? Ask us to make another!</a></p>' : '';
         return '<div class="product-card">' +
           photo +
-          soldStamp +
+          soldNote +
           '<h3>' + p.name + '</h3>' +
           '<p>' + p.description + '</p>' +
           '<div class="price">' + p.price + '</div>' +
