@@ -105,6 +105,12 @@ const products = {
       image: "images/IMG_2580.jpg"
     },
     {
+      name: "Cute Keyring with Butterfly Charm",
+      description: "A handmade keyring to brighten up your keys or bag.",
+      price: "£1",
+      image: "images/IMG_2581.jpg"
+    },
+    {
       name: "Minor Little Thanks Keyring",
       description: "A handmade keyring to brighten up your keys or bag.",
       price: "£1",
