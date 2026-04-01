@@ -125,12 +125,6 @@ const products = {
       price: "£TBC",
       image: ""
     },
-    {
-      name: "Beaded Bookmark",
-      description: "Colourful beads on a ribbon — beautiful and unique.",
-      price: "£TBC",
-      image: ""
-    }
   ]
 
 };
