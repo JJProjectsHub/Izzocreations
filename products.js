@@ -111,6 +111,12 @@ const products = {
       image: "images/IMG_2581.jpg"
     },
     {
+      name: "Purple Clover Keyring",
+      description: "A handmade keyring to brighten up your keys or bag.",
+      price: "£1",
+      image: "images/IMG_2582.jpg"
+    },
+    {
       name: "Minor Little Thanks Keyring",
       description: "A handmade keyring to brighten up your keys or bag.",
       price: "£1",
