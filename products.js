@@ -105,7 +105,7 @@ const products = {
       image: "images/IMG_2557.jpg"
     },
     {
-      name: "Starship Sunshine Keyring",
+      name: "Starfish Sunshine Keyring",
       description: "A handmade keyring to brighten up your keys or bag.",
       price: "£1",
       image: "images/IMG_2554.jpg"
