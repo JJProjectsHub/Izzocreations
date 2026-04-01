@@ -117,6 +117,12 @@ const products = {
       image: "images/IMG_2582.jpg"
     },
     {
+      name: "Golden Star Keyring",
+      description: "A handmade keyring to brighten up your keys or bag.",
+      price: "£1",
+      image: "images/IMG_2583.jpg"
+    },
+    {
       name: "Minor Little Thanks Keyring",
       description: "A handmade keyring to brighten up your keys or bag.",
       price: "£1",
