@@ -87,7 +87,7 @@
         const photo = p.image
           ? '<img src="' + p.image + '" alt="' + p.name + '" class="product-img" style="cursor:zoom-in;" onclick="openLightbox(\'' + p.image + '\', \'' + p.name + '\')" />'
           : '<div class="product-placeholder">Photo Coming Soon</div>';
-        const soldStamp = p.sold ? '<div class="sold-stamp">Sold</div>' : '';
+        const soldStamp = p.sold ? '<div class="sold-stamp">Sold</div><p style="font-size:0.78rem; color:var(--pink-dark); margin-top:8px;"><a href="contact.html" style="color:var(--pink-dark);">Like this? Ask us to make another!</a></p>' : '';
         return '<div class="product-card">' +
           photo +
           soldStamp +
