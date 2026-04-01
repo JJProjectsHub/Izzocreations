@@ -25,6 +25,12 @@ const products = {
       image: "images/IMG_2521b.jpg"
     },
     {
+      name: "We Are One Choker",
+      description: "Handmade with care, available in a range of colours.",
+      price: "£3",
+      image: "images/IMG_2578.jpg"
+    },
+    {
       name: "Charm Bracelet",
       description: "A beautiful bracelet with hand-chosen charms.",
       price: "£TBC",
