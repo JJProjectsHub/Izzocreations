@@ -25,6 +25,13 @@ const products = {
       image: "images/IMG_2521b.jpg"
     },
     {
+      name: "Sandy Starfish Choker",
+      description: "A beautifully detailed handmade choker — extra special and lovingly crafted.",
+      price: "£4",
+      image: "images/IMG_2586.jpg",
+      special: true
+    },
+    {
       name: "We Are One Choker",
       description: "Handmade with care, available in a range of colours.",
       price: "£3",

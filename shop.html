@@ -29,6 +29,14 @@
     <p>Everything here is handmade by us with lots of love and care. See something you like? Email us to order!</p>
   </div>
 
+  <!-- Extra Special Items -->
+  <section id="special" style="background: linear-gradient(135deg, #fff9fb, #fce8f0);">
+    <h2 class="section-title">✨ Extra Special Items ✨</h2>
+    <div class="divider"></div>
+    <p style="text-align:center; font-size:0.88rem; color:var(--gray); max-width:480px; margin:0 auto 28px;">These pieces take extra time and love to make — each one is truly one of a kind!</p>
+    <div class="product-grid" id="grid-special"></div>
+  </section>
+
   <!-- Charm Jewellery -->
   <section id="jewellery">
     <h2 class="section-title">Charm Jewellery</h2>
@@ -113,6 +121,8 @@
       this.style.display = 'none';
     });
 
+    const specialItems = [].concat(products.jewellery, products.bracelets, products.keyrings, products.bookmarks).filter(function(p) { return p.special; });
+    renderGrid('grid-special', specialItems);
     renderGrid('grid-jewellery', products.jewellery);
     renderGrid('grid-bracelets', products.bracelets);
     renderGrid('grid-keyrings', products.keyrings);
