@@ -38,10 +38,10 @@ const products = {
       image: "images/IMG_2578.jpg"
     },
     {
-      name: "Charm Bracelet",
-      description: "A beautiful bracelet with hand-chosen charms.",
-      price: "£TBC",
-      image: ""
+      name: "Bright Cross Bracelet",
+      description: "Handmade with love — perfect for every day.",
+      price: "£2",
+      image: "images/IMG_2588.jpg"
     },
     {
       name: "Sea Shell Waves Bracelet",
@@ -52,12 +52,6 @@ const products = {
   ],
 
   bracelets: [
-    {
-      name: "Bright Cross Bracelet",
-      description: "Handmade with love — perfect for every day.",
-      price: "£2",
-      image: "images/IMG_2588.jpg"
-    },
     {
       name: "Mira Bracelet",
       description: "Handmade with love — perfect for every day.",
