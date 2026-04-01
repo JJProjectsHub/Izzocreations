@@ -53,6 +53,12 @@ const products = {
 
   bracelets: [
     {
+      name: "Bright Cross Bracelet",
+      description: "Handmade with love — perfect for every day.",
+      price: "£2",
+      image: "images/IMG_2588.jpg"
+    },
+    {
       name: "Mira Bracelet",
       description: "Handmade with love — perfect for every day.",
       price: "£2",
