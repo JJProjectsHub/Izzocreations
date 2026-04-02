@@ -53,6 +53,12 @@ const products = {
 
   bracelets: [
     {
+      name: "Blue Huntrix Bracelet",
+      description: "Handmade with love — perfect for every day.",
+      price: "£2",
+      image: "images/IMG_2590.jpg"
+    },
+    {
       name: "Mira Bracelet",
       description: "Handmade with love — perfect for every day.",
       price: "£2",
