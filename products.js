@@ -70,7 +70,8 @@ const products = {
       description: "Handmade and full of colour — the perfect gift for a best friend!",
       price: "£TBC",
       image: "images/IMG_2533b.jpg",
-      custom: true
+      custom: true,
+      sold: true
     },
     {
       name: "Citrus Lemon Bracelet",
